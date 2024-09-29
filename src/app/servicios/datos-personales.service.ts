@@ -12,7 +12,7 @@ export class DatosPersonalesService {
 
   constructor() { }
 
-  setNombre(nombre: string) {
+  setNombre(nombre: string): void {
     this.nombreSubject.next(nombre);
   }
 

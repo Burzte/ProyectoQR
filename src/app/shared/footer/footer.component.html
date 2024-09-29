@@ -1,14 +1,24 @@
 <div class="footer">
 
-  <p>
-    footer works!
-  </p>
+  <p><a [routerLink]="['/']">Home</a></p>
 
-  <p><a [routerLink]="['/']">Inicio Sesion</a></p>
-  <p><a [routerLink]="['/principal-alumno']">Principal Alumno</a></p>
-  <p><a [routerLink]="['/principal-docente']">Principal Docente</a></p>
-  <p><a [routerLink]="['/detalle-asignatura-alumno']">Detalle Asignatura Alumno</a></p>
-  <p><a [routerLink]="['/detalle-asignatura-docente']">Detalle Asignatura Docente</a></p>
-  <p><a [routerLink]="['/restablecer-contrasena']">Restablecer Contraseña</a></p>
+  @if (usuario) {
+    <p><a [routerLink]="['/cerrar-sesion']">Logout</a></p>
+    @if (usuarioCompleto.role === 'Docente') {
+      <p><a [routerLink]="['/principal-docente']">Docente</a></p>
+      <p><a [routerLink]="['/detalle-asignatura-docente']">Detalle Docente</a></p>
+    }
+    @else {
+      <p><a [routerLink]="['/principal-alumno']">Alumno</a></p>
+      <p><a [routerLink]="['/detalle-asignatura-alumno']">Detalle Alumno</a></p>
+    }
+  }
+  @else {
+    <p><a [routerLink]="['/inicio-sesion']">Login</a></p>
+  }
+
+  <p>Copyright © 2024 | Axel Olea B.</p>
 
 </div>
+
+

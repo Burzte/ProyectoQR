@@ -3,3 +3,21 @@
   padding: 10px;
   background-color: darkcyan;
 }
+
+.footer a{
+  color: white;
+  text-decoration: solid transparent;
+  align-items: center;
+  text-align: center;
+  transition: color 0.3s ease;
+  padding: 0 1px;
+  cursor: pointer;
+
+  &:hover{
+    color: lightgreen;
+  }
+}
+
+
+
+

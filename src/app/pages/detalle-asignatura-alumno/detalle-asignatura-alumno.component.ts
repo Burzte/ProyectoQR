@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleAsignaturaAlumnoComponent  implements OnInit {
 
+  showImage = false;
+
   constructor() { }
 
   ngOnInit() {}
+
+  toggleImage() {
+    this.showImage = !this.showImage;
+  }
 
 }

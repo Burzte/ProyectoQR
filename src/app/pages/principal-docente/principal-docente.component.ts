@@ -1,5 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { DatosPersonalesService } from 'src/app/servicios/datos-personales.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-principal-docente',
@@ -8,14 +7,8 @@ import { DatosPersonalesService } from 'src/app/servicios/datos-personales.servi
 })
 export class PrincipalDocenteComponent  implements OnInit {
 
-  datosPersonales = inject(DatosPersonalesService);
-
-  nombre: string;
-
   constructor() { }
 
-  ngOnInit() {
-    this.nombre = this.datosPersonales.getNombre();
-  }
+  ngOnInit() {}
 
 }

@@ -1,9 +1,24 @@
-<p>
-  restablecer-contrasena works!
-</p>
 <ion-content>
 
   <app-header></app-header>
+
+  <div>
+    <ion-text>
+      <h1>Ingrese correo</h1>
+    </ion-text>
+    <br><br>
+   </div>
+   <div>
+       <ion-input type="email"
+       label="Email" labelPlacement="floating" helperText="Debe ingresar un correo válido" errorText="El correo no es válido" ngModel email
+       placeholder="Ingrese su correo" [(ngModel)]="email" class="custom-input"></ion-input>
+   </div>
+       <br><br>
+   <div>
+     <ion-button (click)="mostrarAlerta()">Recuperar cuenta</ion-button>
+   </div>
+
   <app-footer></app-footer>
 
 </ion-content>
+

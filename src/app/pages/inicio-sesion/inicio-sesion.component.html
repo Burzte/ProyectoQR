@@ -1,18 +1,25 @@
 <ion-content>
-
   <app-header></app-header>
 
+  @if (isLoading) {
+    <ion-spinner name="bubbles"></ion-spinner>
+  }
+
   <ion-item>
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input [(ngModel)]="nombre"></ion-input>
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input [(ngModel)]="usuario" class="custom-input"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label position="floating">Clave</ion-label>
+    <ion-input [(ngModel)]="clave" class="custom-input"></ion-input>
+  </ion-item>
+  <ion-button (click)="login(usuario, clave)">Iniciar sesión</ion-button>
 
-  <ion-button (click)="guardarNombre()">Saludar</ion-button>
-
-  <p>
-    inicio-sesion works!
-  </p>
+  <ion-text color="danger" *ngIf="loginFailed">
+    Usuario o clave incorrectos.
+  </ion-text>
+  <br>
+  <ion-button [routerLink]="['/restablecer-contrasena']">Restablecer contraseña</ion-button>
 
   <app-footer></app-footer>
-
 </ion-content>

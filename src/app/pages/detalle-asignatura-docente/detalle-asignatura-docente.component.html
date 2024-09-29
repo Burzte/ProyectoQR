@@ -1,9 +1,23 @@
-<p>
-  detalle-asignatura-docente works!
-</p>
 <ion-content>
 
   <app-header></app-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Asignatura: Programación de Aplicaciones Móviles</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hora: 20:30 hrs</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha: 29/09/2024</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button (click)="toggleImage()">Generar QR</ion-button>
+  <img *ngIf="showImage" src="assets/img/QR2.jpg" alt="" />
+
   <app-footer></app-footer>
 
 </ion-content>

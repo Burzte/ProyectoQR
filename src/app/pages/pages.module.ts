@@ -11,6 +11,7 @@ import { RestablecerContrasenaComponent } from './restablecer-contrasena/restabl
 import { SharedModule } from '../shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     InicioSesionComponent,
     PrincipalAlumnoComponent,
     PrincipalDocenteComponent,
-    RestablecerContrasenaComponent
+    RestablecerContrasenaComponent,
+    CerrarSesionComponent
   ],
   imports: [
     CommonModule,
