@@ -95,6 +95,38 @@ export class AuthService {
     }
   }
 
+  async registrarNuevoUsuario(usuario: any) {
+    const url = 'https://66f73ae3b5d85f31a3424a28.mockapi.io/api/v1/';
+    try {
+      // Verifica si el usuario ya existe antes de registrarlo
+      const usuariosExistentes = await this.obtenerUsuarios();
+      const usuarioExistente = usuariosExistentes.find(u => u.user === usuario.user);
+
+      if (usuarioExistente) {
+        throw new Error('El usuario ya existe');
+      }
+
+      const res = await this.webservice.request('POST', url, 'users', usuario);
+      console.log('Usuario registrado con éxito', res);
+      return res; // Devuelve la respuesta exitosa del registro
+    } catch (error) {
+      console.error('Error al registrar usuario:', error);
+      throw error; // Propaga el error para manejarlo en el componente
+    }
+  }
+
+    // Método para verificar si el usuario ya existe
+    async obtenerUsuarios(): Promise<UsuarioAPI[]> {
+      const url = 'https://66f73ae3b5d85f31a3424a28.mockapi.io/api/v1/';
+      try {
+        const res = await this.webservice.request('GET', url, 'users') as Array<UsuarioAPI>;
+        return res; // Devuelve la lista de usuarios existentes
+      } catch (error) {
+        console.error('Error al obtener usuarios:', error);
+        throw error; // Manejo del error
+      }
+    }
+
 
   logout(): void {
     this.usuarioSubject.next('');  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  // Resetear el nombre de usuario al desloguearse.  //

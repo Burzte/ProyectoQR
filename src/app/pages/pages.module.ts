@@ -8,10 +8,12 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { PrincipalAlumnoComponent } from './principal-alumno/principal-alumno.component';
 import { PrincipalDocenteComponent } from './principal-docente/principal-docente.component';
 import { RestablecerContrasenaComponent } from './restablecer-contrasena/restablecer-contrasena.component';
+import { RegistrarComponent } from './registrar/registrar.component';
 import { SharedModule } from '../shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
     PrincipalAlumnoComponent,
     PrincipalDocenteComponent,
     RestablecerContrasenaComponent,
-    CerrarSesionComponent
+    RegistrarComponent,
+    CerrarSesionComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,

@@ -9,6 +9,8 @@ import { RestablecerContrasenaComponent } from './restablecer-contrasena/restabl
 import { authGuard } from '../guard/auth.guard';
 import { redirectIfAuthGuard } from '../guard/redirect-if-auth.guard';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
+import { RegistrarComponent } from './registrar/registrar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'detalle-asignatura-alumno', component: DetalleAsignaturaAlumnoComponent, canActivate: [authGuard]},
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: 'principal-alumno', component: PrincipalAlumnoComponent, canActivate: [authGuard]},
   { path: 'principal-docente', component: PrincipalDocenteComponent, canActivate: [authGuard]},
   { path: 'restablecer-contrasena', component: RestablecerContrasenaComponent},
-  { path: 'cerrar-sesion', component: CerrarSesionComponent}
+  { path: 'registrar', component: RegistrarComponent},
+  { path: 'cerrar-sesion', component: CerrarSesionComponent},
+  { path: 'not-found', component: NotFoundComponent},
 ];
 
 @NgModule({
