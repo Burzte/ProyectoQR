@@ -1,9 +1,11 @@
 .header{
-  background-color: darkcyan;
+  background: linear-gradient(45deg, #CB6CE6, #15BEC8);
   padding: 10px;
 }
 
 .header p{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
   color: white;
   font-size: 24px;
   text-align: center;
@@ -11,8 +13,9 @@
   padding: 0;
   font-weight: bold;
   text-transform: capitalize;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
+
 
 
 

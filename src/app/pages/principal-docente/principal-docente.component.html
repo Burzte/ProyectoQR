@@ -2,39 +2,16 @@
 
   <app-header></app-header>
 
-  <ion-list>
-
     <ion-item>
-      <ion-label>Programación de Aplicaciones Móviles</ion-label>
-      <ion-button [routerLink]="['/detalle-asignatura-docente']" slot="end" color="primary">Ingresar a Asignatura</ion-button>
+      <ion-label>Ir al detalle de asignaturas</ion-label>
+      <div class="button-container">
+        <ion-button [routerLink]="['/detalle-asignatura-docente']" slot="end">Ingresar</ion-button>
+      </div>
     </ion-item>
 
-    <ion-item>
-      <ion-label>Arquitectura de Software</ion-label>
-      <ion-button [routerLink]="['/detalle-asignatura-docente']" slot="end" color="primary">Ingresar a Asignatura</ion-button>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Lenguajes de Programación</ion-label>
-      <ion-button [routerLink]="['/detalle-asignatura-docente']" slot="end" color="primary">Ingresar a Asignatura</ion-button>
-    </ion-item>
-    <ion-item>
-      <ion-label>Desarrollo de Software</ion-label>
-      <ion-button [routerLink]="['/detalle-asignatura-docente']" slot="end" color="primary">Ingresar a Asignatura</ion-button>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Calidad de Software</ion-label>
-      <ion-button [routerLink]="['/detalle-asignatura-docente']" slot="end" color="primary">Ingresar a Asignatura</ion-button>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Programación Web</ion-label>
-      <ion-button [routerLink]="['/detalle-asignatura-docente']" slot="end" color="primary">Ingresar a Asignatura</ion-button>
-    </ion-item>
-
-  </ion-list>
-
-  <app-footer></app-footer>
+    <div class="logo-container">
+      <p><img class="icon-gif" src="../../../assets/img/Registro-logo.jpeg" width="400px" height="335px" justify-content="center"></p>
+    </div>
 
 </ion-content>
+<app-footer></app-footer>

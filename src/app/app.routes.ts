@@ -6,6 +6,11 @@ export const routes: Routes = [
     loadChildren: () => import('./pages/pages.module').then( m => m.PagesModule)
   },
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: 'inicio-sesion',
     redirectTo: 'inicio-sesion',
     pathMatch: 'full'

@@ -1,3 +1,46 @@
-img{
+ion-content {
   display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.qr-container{ 
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.button-container {
+  display: flex; /* Usar flexbox para centrar el botón */
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  margin-top: 16px; /* Espacio por encima del botón */
+
+  ion-button {
+    width: 170px;
+    height: 40px;
+    --color: #ffffff;
+    --background: transparent; /* Fondo transparente */
+    --border: none; /* Sin borde */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    overflow: hidden; /* Para ocultar el pseudo-elemento que sobresale */
+    border-radius: 100px; /* Bordes redondeados */
+    font-family: 'Arial', sans-serif; /* Cambia a tu tipo de letra preferido */
+
+    background: linear-gradient(45deg, #CB6CE6, #15BEC8);
+
+    box-shadow: 0 4px 15px rgba(203, 108, 230, 0.5);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(203, 108, 230, 0.7);
+    }
+  }
 }

@@ -1,7 +1,6 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/servicios/auth.service';
-import { DatosPersonalesService } from 'src/app/servicios/datos-personales.service';
 
 interface UsuarioAPI { // Definir la interface para los usuarios de la API
   user: string,
@@ -12,16 +11,12 @@ interface UsuarioAPI { // Definir la interface para los usuarios de la API
   id: string
 }
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent  implements OnInit, OnDestroy {
-
-  nombre: string; // Campo para almacenar el nombre
-  private sharedService = inject(DatosPersonalesService); // Obtener el servicio de datos personales
 
   private authService = inject(AuthService); // Obtener el servicio de autenticación
   usuario: string; // Campo para almacenar el nombre del usuario
@@ -33,9 +28,9 @@ export class HeaderComponent  implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-    this.subscriptionDatosPersonales = this.sharedService.nombre$.subscribe(nombre => {
-      this.nombre = nombre
-      console.log('Header:', nombre);
+    this.subscriptionDatosPersonales = this.authService.usuario$.subscribe(usuario => {
+      this.usuario = usuario
+      console.log('Header:', usuario);
     }); // Obtiene el nombre del
 
     this.subscriptionAuthService = this.authService.usuario$.subscribe(usuario => {

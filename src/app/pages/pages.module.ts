@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { QRCodeModule } from 'angularx-qrcode'; // Importar QRCodeModule
+
 
 import { PagesRoutingModule } from './pages-routing.module';
+import { HomeComponent } from './home/home.component';
 import { DetalleAsignaturaAlumnoComponent } from './detalle-asignatura-alumno/detalle-asignatura-alumno.component';
 import { DetalleAsignaturaDocenteComponent } from './detalle-asignatura-docente/detalle-asignatura-docente.component';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
@@ -14,10 +17,12 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 
 @NgModule({
   declarations: [
+    HomeComponent,
     DetalleAsignaturaAlumnoComponent,
     DetalleAsignaturaDocenteComponent,
     InicioSesionComponent,
@@ -33,7 +38,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
     PagesRoutingModule,
     SharedModule,
     IonicModule,
-    FormsModule
-  ]
+    FormsModule,
+    QRCodeModule
+  ],
+
 })
 export class PagesModule { }

@@ -1,26 +1,33 @@
 <ion-content>
-  <app-header></app-header>
-
-  @if (isLoading) {
-    <ion-spinner name="bubbles"></ion-spinner>
-  }
-
-  <ion-item>
-    <ion-label position="floating">Usuario</ion-label>
-    <ion-input [(ngModel)]="usuario" class="custom-input"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Clave</ion-label>
-    <ion-input [(ngModel)]="clave" class="custom-input"></ion-input>
-  </ion-item>
-  <ion-button (click)="login(usuario, clave)">Iniciar sesión</ion-button>
-
-  <ion-text color="danger" *ngIf="loginFailed">
-    Usuario o clave incorrectos.
+  <div class="logo-container">
+    <p><img class="icon-gif" src="../../../assets/img/color.jpeg"  justify-content="center" width="100%"></p>
+  </div>
+  <div class="container-div">
+  <ion-text class="ion-text-center" color="dark">
+    <h4>Login</h4>
+    <p>Ingrese su información de registro</p>
   </ion-text>
   <br>
-  <ion-button [routerLink]="['/restablecer-contrasena']">Restablecer contraseña</ion-button>
-  <ion-button [routerLink]="['/registrar']">¿No tienes cuenta?, Regístrate</ion-button>
+  <form (ngSubmit)="login(usuario, clave)">
+    <div class="input-container">
+      <ion-input type="usuario" [(ngModel)]="usuario" name="usuario" required
+      label="Usuario" label-placement="floating" fill="outline" placeholder="Ingresar Usuario" ></ion-input>
+    </div>
+    <div class="input-container">
+      <ion-input type="password" [(ngModel)]="clave" name="password" required
+      label="Contraseña" label-placement="floating" fill="outline" placeholder="Ingresar Contraseña" >
+      </ion-input>
+    </div>
 
-  <app-footer></app-footer>
+
+      <div class="button-container">
+        <ion-button type="submit" fill="solid">Iniciar Sesión</ion-button>
+      </div>
+    <div class="register-container">
+      <ion-item lines="none">
+        <ion-label>No tienes una cuenta? <a [routerLink]="['/registrar']">Regístrate aquí</a></ion-label>
+      </ion-item>
+    </div>
+  </form>
+</div>
 </ion-content>

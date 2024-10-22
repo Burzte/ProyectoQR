@@ -14,7 +14,7 @@ export class RegistrarComponent {
   clave: string = '';
   nombreCompleto: string = '';
   telefono: string = '';
-  rol: string = 'alumno'; // Valor por defecto 'alumno'
+  role: string = 'alumno'; // Valor por defecto 'alumno'
 
   errorMessage: string = ''; // Para mostrar mensajes de error (si el usuario ya existe)
   successMessage: string = ''; // Para mostrar mensaje de éxito
@@ -60,7 +60,7 @@ export class RegistrarComponent {
       pass: this.clave,
       name: this.nombreCompleto,
       phone: this.telefono,
-      rol: this.rol
+      role: this.role
     };
 
     try {

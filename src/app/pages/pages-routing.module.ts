@@ -11,18 +11,19 @@ import { redirectIfAuthGuard } from '../guard/redirect-if-auth.guard';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: 'detalle-asignatura-alumno', component: DetalleAsignaturaAlumnoComponent, canActivate: [authGuard]},
   { path: 'detalle-asignatura-docente', component: DetalleAsignaturaDocenteComponent, canActivate: [authGuard]},
-  { path: '', component: InicioSesionComponent},
+  { path: '', component: HomeComponent},
   { path: 'inicio-sesion', component: InicioSesionComponent, canActivate: [redirectIfAuthGuard]},
   { path: 'principal-alumno', component: PrincipalAlumnoComponent, canActivate: [authGuard]},
   { path: 'principal-docente', component: PrincipalDocenteComponent, canActivate: [authGuard]},
   { path: 'restablecer-contrasena', component: RestablecerContrasenaComponent},
   { path: 'registrar', component: RegistrarComponent},
   { path: 'cerrar-sesion', component: CerrarSesionComponent},
-  { path: 'not-found', component: NotFoundComponent},
+  { path: '**', component: NotFoundComponent},
 ];
 
 @NgModule({

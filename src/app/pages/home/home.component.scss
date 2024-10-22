@@ -1,0 +1,34 @@
+ion-content {
+  --background: #ffffff;
+}
+
+.button-container {
+  display: flex; /* Usar flexbox para centrar el botón */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+
+
+  ion-button {
+    width: 270px; /* Ancho del botón */
+    height: 40px; /* Alto del botón */
+    --color: #ffffff; /* Color del texto en blanco */
+    --background: transparent; /* Fondo transparente */
+    --border: none; /* Sin borde */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    overflow: hidden; /* Para ocultar el pseudo-elemento que sobresale */
+    border-radius: 100px; /* Bordes redondeados */
+
+    /* Degradado de fondo */
+    background: linear-gradient(45deg, #CB6CE6, #15BEC8); /* Degradado de colores */
+
+    /* Sombra */
+    box-shadow: 0 4px 15px rgba(203, 108, 230, 0.5);
+    transition: all 0.3s ease; /* Transiciones suaves para hover */
+
+    /* Efecto hover */
+    &:hover {
+      transform: scale(1.05); /* Aumenta un poco el tamaño al pasar el ratón */
+      box-shadow: 0 6px 20px rgba(203, 108, 230, 0.7); /* Sombra más pronunciada al hover */
+    }
+  }
+}

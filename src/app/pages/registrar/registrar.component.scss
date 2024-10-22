@@ -1,0 +1,40 @@
+.button-container {
+  display: flex; /* Usar flexbox para centrar el botón */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  margin-top: 16px; /* Espacio por encima del botón */
+
+  ion-button {
+    width: 170px;
+    height: 40px;
+    --color: #ffffff;
+    --background: transparent; /* Fondo transparente */
+    --border: none; /* Sin borde */
+    position: relative; /* Para posicionar el pseudo-elemento */
+    overflow: hidden; /* Para ocultar el pseudo-elemento que sobresale */
+    border-radius: 100px; /* Bordes redondeados */
+    font-family: 'Arial', sans-serif; /* Cambia a tu tipo de letra preferido */
+    margin-bottom: 20px;
+
+    background: linear-gradient(45deg, #CB6CE6, #15BEC8);
+
+    box-shadow: 0 4px 15px rgba(203, 108, 230, 0.5);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(203, 108, 230, 0.7);
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 400px; /* Ajusta el ancho del contenedor para que se adapte a la pantalla */
+  margin: 0 auto; /* Centra el contenido en el viewport */
+  padding: 20px; /* Agrega espacio alrededor del contenido */
+  background: linear-gradient(45deg, #CB6CE6, #15BEC8);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: white;
+}
