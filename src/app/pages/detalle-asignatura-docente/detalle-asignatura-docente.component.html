@@ -13,11 +13,11 @@
     <p>Hora: {{ selectedAsignatura.hora }}</p>
 
     <div class="qr-container">
-        <qrcode *ngIf="showQR" [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
-    </div>
-    <div class="button-container">
-      <ion-button (click)="generateQR()">Generar QR</ion-button>
-    </div>
+      <qrcode *ngIf="showQR" [qrdata]="qrData" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  </div>
+  <div class="button-container">
+    <ion-button (click)="generateQR()">Generar QR</ion-button>
+  </div>
   </div>
 
 </ion-content>

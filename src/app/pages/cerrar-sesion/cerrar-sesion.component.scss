@@ -1,0 +1,20 @@
+h1 {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #515151; /* Color del texto */
+  margin: 5px 0; /* Espaciado superior e inferior */
+  margin-top: 25px;
+}
+
+
+.logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
